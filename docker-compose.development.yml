@@ -9,6 +9,8 @@ services:
     volumes:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
+      - ./directus-endpoint-truyendex:/directus/extensions/directus-extension-directus-endpoint-truyendex
+
     depends_on:
       database:
         condition: service_healthy
