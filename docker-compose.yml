@@ -32,5 +32,7 @@ services:
 
       CONTENT_SECURITY_POLICY_DIRECTIVES__IMG_SRC: "* 'self' data: blob:"
     networks:
-      truyendex:
-        external: true
+      - truyendex
+networks:
+  truyendex:
+    external: true
