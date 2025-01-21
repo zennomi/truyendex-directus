@@ -32,3 +32,5 @@ services:
       ADMIN_PASSWORD: "${ADMIN_PASSWORD}"
 
       CONTENT_SECURITY_POLICY_DIRECTIVES__IMG_SRC: "* 'self' data: blob:"
+    networks:
+      - truyendex
