@@ -29,7 +29,7 @@ export default defineEndpoint((router, context) => {
       const result: Record<string, string[]> = {};
       fromVariants.forEach((v) => {
         const matchedVariants = toVariants.filter((tv) => tv.title === v.title);
-        if (matchedVariants) {
+        if (matchedVariants.length > 0) {
           result[v.source_id] = matchedVariants.map((mv) => mv.source_id);
         }
       });
