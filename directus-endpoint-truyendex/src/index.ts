@@ -26,11 +26,11 @@ export default defineEndpoint((router, context) => {
           fromVariants.map((v) => v.title)
         )
         .select("*");
-      const result: Record<string, string> = {};
+      const result: Record<string, string[]> = {};
       fromVariants.forEach((v) => {
-        const toVariant = toVariants.find((tv) => tv.title === v.title);
-        if (toVariant) {
-          result[v.source_id] = toVariant.source_id;
+        const matchedVariants = toVariants.filter((tv) => tv.title === v.title);
+        if (matchedVariants) {
+          result[v.source_id] = matchedVariants.map((mv) => mv.source_id);
         }
       });
       return res.json({ result });
