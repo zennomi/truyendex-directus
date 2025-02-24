@@ -9,7 +9,7 @@ services:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
       - ./directus-endpoint-truyendex:/directus/extensions/directus-extension-directus-endpoint-truyendex
-      - ./directus-display-external-image:/directus/extensions/directus-extension-directus-display-external-image
+      - ./directus-truyendex-bundle:/directus/extensions/directus-extension-directus-truyendex-bundle
 
     environment:
       SECRET: "${SECRET}"

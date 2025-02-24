@@ -1,0 +1,1 @@
+ALTER TABLE "proxy" ADD CONSTRAINT proxy_ip_port_unique UNIQUE (ip, port);
